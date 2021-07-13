@@ -10,9 +10,8 @@ const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
 
-
 const config = {
-    entry: './src/index.js',
+    entry: './src/assets/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
@@ -22,7 +21,8 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            title: 'Output Management',
+            template: './src/index.html',
         }),
 
         // Add your plugins here
@@ -36,11 +36,11 @@ const config = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
+                use: [stylesHandler, 'style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
                 test: /\.css$/i,
-                use: [stylesHandler, 'css-loader', 'postcss-loader'],
+                use: [stylesHandler, 'style-loader', 'css-loader', 'postcss-loader'],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
