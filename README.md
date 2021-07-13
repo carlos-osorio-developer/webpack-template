@@ -29,10 +29,10 @@ To get a local copy up and running follow these simple example steps.
 
 - Use your github account and your terminal to clone this repository to your computer:
 
-`git clone git@github.com:carlos-osorio-developer/web-library.git`
+`git@github.com:carlos-osorio-developer/webpack-template.git`
 
 - Go to the cloned directory:
-`cd web-library`
+`cd webpack-template`
 
 
 ### Usage
