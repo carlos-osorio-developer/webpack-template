@@ -1,4 +1,4 @@
-# Web-Library App
+# Webpack template
 
 This is a template for Webpack, as a starting point for every other project using it.
 
